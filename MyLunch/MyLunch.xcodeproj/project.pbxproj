@@ -16,6 +16,7 @@
 		BFC3CA3B1A9EBDEC00F27AEB /* MYLDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFC3CA3A1A9EBDEC00F27AEB /* MYLDetailViewController.m */; };
 		BFC3CA3E1A9EC0EE00F27AEB /* MYLLunchModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BFC3CA3D1A9EC0EE00F27AEB /* MYLLunchModel.m */; };
 		BFC3CA411A9EC2CD00F27AEB /* NSString+MYLAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = BFC3CA401A9EC2CD00F27AEB /* NSString+MYLAdditions.m */; };
+		BFC3CA451A9EE35300F27AEB /* MYLSelectedPhotosViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFC3CA441A9EE35300F27AEB /* MYLSelectedPhotosViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,8 @@
 		BFC3CA3F1A9EC2CD00F27AEB /* NSString+MYLAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MYLAdditions.h"; sourceTree = "<group>"; };
 		BFC3CA401A9EC2CD00F27AEB /* NSString+MYLAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MYLAdditions.m"; sourceTree = "<group>"; };
 		BFC3CA421A9EC39D00F27AEB /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PrefixHeader.pch; path = ../PrefixHeader.pch; sourceTree = "<group>"; };
+		BFC3CA431A9EE35300F27AEB /* MYLSelectedPhotosViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MYLSelectedPhotosViewController.h; sourceTree = "<group>"; };
+		BFC3CA441A9EE35300F27AEB /* MYLSelectedPhotosViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MYLSelectedPhotosViewController.m; sourceTree = "<group>"; };
 		C9B7B8CFC8FA9293593850CC /* libPods-MyLunch.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MyLunch.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F70A4283A5BC07E8087DFE52 /* Pods-MyLunch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyLunch.release.xcconfig"; path = "../Pods/Target Support Files/Pods-MyLunch/Pods-MyLunch.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -117,6 +120,8 @@
 				BFC3CA171A9EB17E00F27AEB /* MYLTextInputViewController.m */,
 				BFC3CA351A9EBCF300F27AEB /* MYLSelectPhotosViewController.h */,
 				BFC3CA361A9EBCF300F27AEB /* MYLSelectPhotosViewController.m */,
+				BFC3CA431A9EE35300F27AEB /* MYLSelectedPhotosViewController.h */,
+				BFC3CA441A9EE35300F27AEB /* MYLSelectedPhotosViewController.m */,
 				BFC3CA391A9EBDEC00F27AEB /* MYLDetailViewController.h */,
 				BFC3CA3A1A9EBDEC00F27AEB /* MYLDetailViewController.m */,
 				BFC3CA3C1A9EC0EE00F27AEB /* MYLLunchModel.h */,
@@ -232,6 +237,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BFC3CA181A9EB17E00F27AEB /* MYLTextInputViewController.m in Sources */,
+				BFC3CA451A9EE35300F27AEB /* MYLSelectedPhotosViewController.m in Sources */,
 				BFC3CA151A9EB17E00F27AEB /* AppDelegate.m in Sources */,
 				BFC3CA121A9EB17E00F27AEB /* main.m in Sources */,
 				BFC3CA3E1A9EC0EE00F27AEB /* MYLLunchModel.m in Sources */,

@@ -8,6 +8,7 @@
 
 #import "MYLSelectPhotosViewController.h"
 
+#import "MYLSelectedPhotosViewController.h"
 #import "MYLDetailViewController.h"
 #import "MYLLunchModel.h"
 
@@ -21,8 +22,9 @@ static const CGFloat kItemVSpacer = 5.0f;
 
 @interface MYLSelectPhotosViewController () <ELCImagePickerControllerDelegate>
 
+@property (nonatomic, strong) MYLSelectedPhotosViewController *selectedPhotosVC;
+
 @property (nonatomic, weak) UILabel *instructionLabel;
-@property (nonatomic, weak) UILabel *debugLabel;
 
 @end
 
@@ -43,27 +45,27 @@ static const CGFloat kItemVSpacer = 5.0f;
 - (void)loadView
 {
   UIView *view = [UIView new];
+  self.view = view;
   view.backgroundColor = [UIColor whiteColor];
   
   UILabel *instructionLabel = [UILabel new];
-  instructionLabel.text = @"Tap to add photos to your lunch (optional)";
+  instructionLabel.text = @"Tap here to add photos to your lunch (optional)";
   instructionLabel.numberOfLines = 0;
   [view addSubview:instructionLabel];
   _instructionLabel = instructionLabel;
   
-  UILabel *debugLabel = [UILabel new];
-  debugLabel.text = @"";
-  debugLabel.numberOfLines = 0;
-  [view addSubview:debugLabel];
-  _debugLabel = debugLabel;
+  self.selectedPhotosVC = [[MYLSelectedPhotosViewController alloc] initWithPhotos:self.model.photos];
+  [self addChildViewController:self.selectedPhotosVC];
+  [self.view addSubview:self.selectedPhotosVC.view];
+  [self.selectedPhotosVC didMoveToParentViewController:self];
   
   self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone
                                                                                          target:self
                                                                                          action:@selector(donePressed)];
   
-  [view addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self
-                                                                     action:@selector(beginSelectingPhotos)]];
-  self.view = view;
+  UITapGestureRecognizer *onTap = [[UITapGestureRecognizer alloc] initWithTarget:self
+                                                                          action:@selector(beginSelectingPhotos)];
+  [view addGestureRecognizer:onTap];
 }
 
 - (void)viewWillLayoutSubviews
@@ -78,11 +80,10 @@ static const CGFloat kItemVSpacer = 5.0f;
   frame.origin = CGPointMake(kViewMargin, kViewMargin);
   self.instructionLabel.frame = frame;
   
-  self.debugLabel.text = [NSString stringWithFormat:@"%@ photos", @([self.model.photos count])];
-  frame = self.debugLabel.frame;
-  frame.size = [self.debugLabel sizeThatFits:CGSizeMake(width, CGFLOAT_MAX)];
-  frame.origin = CGPointMake(kViewMargin, CGRectGetMaxY(self.instructionLabel.frame) + kSectionVSpacer);
-  self.debugLabel.frame = frame;
+  frame = self.selectedPhotosVC.view.frame;
+  frame.size = [self.selectedPhotosVC.view sizeThatFits:CGSizeMake(width, CGFLOAT_MAX)];
+  frame.origin = CGPointMake(kViewMargin, CGRectGetMaxY(self.instructionLabel.frame) + kViewMargin);
+  self.selectedPhotosVC.view.frame = frame;
 }
 
 - (NSString *)title
@@ -99,9 +100,9 @@ static const CGFloat kItemVSpacer = 5.0f;
     UIImage *photo = imageInfo[@"UIImagePickerControllerOriginalImage"];
     [photos addObject:photo];
   }];
-  [self.model associatePhotos:photos];
-  
+  self.selectedPhotosVC.photos = photos;
   [self.view setNeedsLayout];
+  
   [self dismissViewControllerAnimated:YES completion:NULL];
 }
 
@@ -123,6 +124,7 @@ static const CGFloat kItemVSpacer = 5.0f;
 - (void)donePressed
 {
   // TODO(jpr): error handling
+  [self.model associatePhotos:self.selectedPhotosVC.photos];
   UIViewController *vc = [[MYLDetailViewController alloc] initWithLunchModel:self.model];
   [self.navigationController pushViewController:vc animated:YES];
 }
