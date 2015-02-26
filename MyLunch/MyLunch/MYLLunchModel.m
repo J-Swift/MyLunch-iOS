@@ -27,6 +27,7 @@
   {
     _name = name;
     _foodDescription = foodDescription;
+    _images = [NSArray array];
   }
   
   return self;
@@ -36,7 +37,11 @@
 {
   BOOL result = NO;
   
-  // TODO(jpr): set self.images
+  if ( images )
+  {
+    _images = images;
+    result = YES;
+  }
   
   return result;
 }
