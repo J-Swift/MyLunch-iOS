@@ -78,7 +78,7 @@ static const CGFloat kItemVSpacer = 5.0f;
   frame.origin = CGPointMake(kViewMargin, kViewMargin);
   self.instructionLabel.frame = frame;
   
-  self.debugLabel.text = [NSString stringWithFormat:@"%@ images", @([self.model.images count])];
+  self.debugLabel.text = [NSString stringWithFormat:@"%@ photos", @([self.model.photos count])];
   frame = self.debugLabel.frame;
   frame.size = [self.debugLabel sizeThatFits:CGSizeMake(width, CGFLOAT_MAX)];
   frame.origin = CGPointMake(kViewMargin, CGRectGetMaxY(self.instructionLabel.frame) + kSectionVSpacer);
@@ -94,12 +94,12 @@ static const CGFloat kItemVSpacer = 5.0f;
 
 - (void)elcImagePickerController:(ELCImagePickerController *)picker didFinishPickingMediaWithInfo:(NSArray *)info
 {
-  NSMutableArray *images = [NSMutableArray array];
+  NSMutableArray *photos = [NSMutableArray array];
   [info enumerateObjectsUsingBlock:^(NSDictionary *imageInfo, NSUInteger idx, BOOL *stop) {
-    UIImage *image = imageInfo[@"UIImagePickerControllerOriginalImage"];
-    [images addObject:image];
+    UIImage *photo = imageInfo[@"UIImagePickerControllerOriginalImage"];
+    [photos addObject:photo];
   }];
-  [self.model associateImages:images];
+  [self.model associatePhotos:photos];
   
   [self.view setNeedsLayout];
   [self dismissViewControllerAnimated:YES completion:NULL];

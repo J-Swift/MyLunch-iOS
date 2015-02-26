@@ -27,19 +27,19 @@
   {
     _name = name;
     _foodDescription = foodDescription;
-    _images = [NSArray array];
+    _photos = [NSArray array];
   }
   
   return self;
 }
 
-- (BOOL)associateImages:(NSArray *)images
+- (BOOL)associatePhotos:(NSArray *)photos
 {
   BOOL result = NO;
   
-  if ( images )
+  if ( photos )
   {
-    _images = images;
+    _photos = photos;
     result = YES;
   }
   

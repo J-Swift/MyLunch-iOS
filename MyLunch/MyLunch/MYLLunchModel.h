@@ -12,11 +12,11 @@
 
 @property (nonatomic, copy, readonly) NSString *name;
 @property (nonatomic, copy, readonly) NSString *foodDescription;
-@property (nonatomic, copy, readonly) NSArray *images; // UIImage
+@property (nonatomic, copy, readonly) NSArray *photos; // UIImage
 
 
 - (instancetype)initWithName:(NSString *)name foodDescription:(NSString *)foodDescription NS_DESIGNATED_INITIALIZER;
 
-- (BOOL)associateImages:(NSArray *)images; // UIImage
+- (BOOL)associatePhotos:(NSArray *)photos; // UIImage
 
 @end
