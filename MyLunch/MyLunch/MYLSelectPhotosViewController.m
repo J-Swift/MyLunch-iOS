@@ -12,6 +12,17 @@
 
 @implementation MYLSelectPhotosViewController
 
+- (instancetype)initWithLunchModel:(MYLLunchModel *)model
+{
+  if ( self = [super init] )
+  {
+    NSParameterAssert(model);
+    _model = model;
+  }
+  
+  return self;
+}
+
 - (void)loadView
 {
   UILabel *label = [UILabel new];
@@ -34,7 +45,8 @@
 
 - (void)donePressed
 {
-  UIViewController *vc = [MYLDetailViewController new];
+  // TODO(jpr): error handling
+  UIViewController *vc = [[MYLDetailViewController alloc] initWithLunchModel:self.model];
   [self.navigationController pushViewController:vc animated:YES];
 }
 

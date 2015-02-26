@@ -1,0 +1,17 @@
+//
+//  PrefixHeader.pch
+//  MyLunch
+//
+//  Created by James Reichley on 2/25/15.
+//  Copyright (c) 2015 RadReichley. All rights reserved.
+//
+
+#ifndef MyLunch_PrefixHeader_pch
+#define MyLunch_PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#import "NSString+MYLAdditions.h"
+
+#endif

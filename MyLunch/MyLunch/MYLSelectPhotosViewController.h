@@ -8,6 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
+@class MYLLunchModel;
+
 @interface MYLSelectPhotosViewController : UIViewController
+
+@property (nonatomic, strong, readonly) MYLLunchModel *model;
+
+- (instancetype)initWithLunchModel:(MYLLunchModel *)model;
 
 @end

@@ -9,6 +9,7 @@
 #import "MYLTextInputViewController.h"
 
 #import "MYLSelectPhotosViewController.h"
+#import "MYLLunchModel.h"
 
 @implementation MYLTextInputViewController
 
@@ -34,7 +35,9 @@
 
 - (void)donePressed
 {
-  UIViewController *vc = [MYLSelectPhotosViewController new];
+  // TODO(jpr): error handling
+  MYLLunchModel *model = [[MYLLunchModel alloc] initWithName:@"Food Name" foodDescription:@"Food Description"];
+  UIViewController *vc = [[MYLSelectPhotosViewController alloc] initWithLunchModel:model];
   [self.navigationController pushViewController:vc animated:YES];
 }
 

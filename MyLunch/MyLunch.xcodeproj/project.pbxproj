@@ -14,6 +14,8 @@
 		BFC3CA2C1A9EB17F00F27AEB /* MyLunchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BFC3CA2B1A9EB17F00F27AEB /* MyLunchTests.m */; };
 		BFC3CA371A9EBCF300F27AEB /* MYLSelectPhotosViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFC3CA361A9EBCF300F27AEB /* MYLSelectPhotosViewController.m */; };
 		BFC3CA3B1A9EBDEC00F27AEB /* MYLDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFC3CA3A1A9EBDEC00F27AEB /* MYLDetailViewController.m */; };
+		BFC3CA3E1A9EC0EE00F27AEB /* MYLLunchModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BFC3CA3D1A9EC0EE00F27AEB /* MYLLunchModel.m */; };
+		BFC3CA411A9EC2CD00F27AEB /* NSString+MYLAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = BFC3CA401A9EC2CD00F27AEB /* NSString+MYLAdditions.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +44,11 @@
 		BFC3CA361A9EBCF300F27AEB /* MYLSelectPhotosViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MYLSelectPhotosViewController.m; sourceTree = "<group>"; };
 		BFC3CA391A9EBDEC00F27AEB /* MYLDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MYLDetailViewController.h; sourceTree = "<group>"; };
 		BFC3CA3A1A9EBDEC00F27AEB /* MYLDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MYLDetailViewController.m; sourceTree = "<group>"; };
+		BFC3CA3C1A9EC0EE00F27AEB /* MYLLunchModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MYLLunchModel.h; sourceTree = "<group>"; };
+		BFC3CA3D1A9EC0EE00F27AEB /* MYLLunchModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MYLLunchModel.m; sourceTree = "<group>"; };
+		BFC3CA3F1A9EC2CD00F27AEB /* NSString+MYLAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MYLAdditions.h"; sourceTree = "<group>"; };
+		BFC3CA401A9EC2CD00F27AEB /* NSString+MYLAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MYLAdditions.m"; sourceTree = "<group>"; };
+		BFC3CA421A9EC39D00F27AEB /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PrefixHeader.pch; path = ../PrefixHeader.pch; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +93,7 @@
 				BFC3CA381A9EBD0100F27AEB /* Classes */,
 				BFC3CA131A9EB17E00F27AEB /* AppDelegate.h */,
 				BFC3CA141A9EB17E00F27AEB /* AppDelegate.m */,
+				BFC3CA421A9EC39D00F27AEB /* PrefixHeader.pch */,
 				BFC3CA1C1A9EB17E00F27AEB /* Images.xcassets */,
 				BFC3CA0F1A9EB17E00F27AEB /* Supporting Files */,
 			);
@@ -127,6 +135,10 @@
 				BFC3CA361A9EBCF300F27AEB /* MYLSelectPhotosViewController.m */,
 				BFC3CA391A9EBDEC00F27AEB /* MYLDetailViewController.h */,
 				BFC3CA3A1A9EBDEC00F27AEB /* MYLDetailViewController.m */,
+				BFC3CA3C1A9EC0EE00F27AEB /* MYLLunchModel.h */,
+				BFC3CA3D1A9EC0EE00F27AEB /* MYLLunchModel.m */,
+				BFC3CA3F1A9EC2CD00F27AEB /* NSString+MYLAdditions.h */,
+				BFC3CA401A9EC2CD00F27AEB /* NSString+MYLAdditions.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -233,8 +245,10 @@
 				BFC3CA181A9EB17E00F27AEB /* MYLTextInputViewController.m in Sources */,
 				BFC3CA151A9EB17E00F27AEB /* AppDelegate.m in Sources */,
 				BFC3CA121A9EB17E00F27AEB /* main.m in Sources */,
+				BFC3CA3E1A9EC0EE00F27AEB /* MYLLunchModel.m in Sources */,
 				BFC3CA3B1A9EBDEC00F27AEB /* MYLDetailViewController.m in Sources */,
 				BFC3CA371A9EBCF300F27AEB /* MYLSelectPhotosViewController.m in Sources */,
+				BFC3CA411A9EC2CD00F27AEB /* NSString+MYLAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,6 +294,7 @@
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -321,6 +336,7 @@
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -339,6 +355,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = PrefixHeader.pch;
 				INFOPLIST_FILE = MyLunch/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -349,6 +367,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = PrefixHeader.pch;
 				INFOPLIST_FILE = MyLunch/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
