@@ -8,6 +8,7 @@
 
 #import "MYLDetailViewController.h"
 
+#import "MYLSelectedPhotosViewController.h"
 #import "MYLLunchModel.h"
 
 
@@ -16,6 +17,8 @@ static const CGFloat kSectionVSpacer = 20.0f;
 
 
 @interface MYLDetailViewController ()
+
+@property (nonatomic, strong) MYLSelectedPhotosViewController *selectedPhotosVC;
 
 @property (nonatomic, weak) UILabel *nameLabel;
 @property (nonatomic, weak) UILabel *descriptionLabel;
@@ -38,22 +41,25 @@ static const CGFloat kSectionVSpacer = 20.0f;
 
 - (void)loadView
 {
-  UIView *view = [UIView new];
-  view.backgroundColor = [UIColor whiteColor];
+  self.view = [UIView new];
+  self.view.backgroundColor = [UIColor whiteColor];
   
   UILabel *nameLabel = [UILabel new];
   nameLabel.text = self.model.name;
   nameLabel.numberOfLines = 0;
-  [view addSubview:nameLabel];
+  [self.view addSubview:nameLabel];
   _nameLabel = nameLabel;
   
   UILabel *descriptionLabel = [UILabel new];
   descriptionLabel.text = self.model.foodDescription;
   descriptionLabel.numberOfLines = 0;
-  [view addSubview:descriptionLabel];
+  [self.view addSubview:descriptionLabel];
   _descriptionLabel = descriptionLabel;
   
-  self.view = view;
+  self.selectedPhotosVC = [[MYLSelectedPhotosViewController alloc] initWithPhotos:self.model.photos];
+  [self addChildViewController:self.selectedPhotosVC];
+  [self.view addSubview:self.selectedPhotosVC.view];
+  [self.selectedPhotosVC didMoveToParentViewController:self];
 }
 
 - (void)viewWillLayoutSubviews
@@ -69,10 +75,15 @@ static const CGFloat kSectionVSpacer = 20.0f;
   frame.origin = CGPointMake(kViewMargin, kViewMargin);
   self.nameLabel.frame = frame;
   
+  frame = self.selectedPhotosVC.view.frame;
+  frame.size = [self.selectedPhotosVC.view sizeThatFits:CGSizeMake(width, CGFLOAT_MAX)];
+  frame.origin = CGPointMake(kViewMargin, CGRectGetMaxY(self.nameLabel.frame) + kViewMargin);
+  self.selectedPhotosVC.view.frame = frame;
+  
   frame = self.descriptionLabel.frame;
   frame.size = [self.descriptionLabel sizeThatFits:CGSizeMake(width, CGFLOAT_MAX)];
   frame.origin = CGPointMake(kViewMargin,
-                             CGRectGetMaxY(self.nameLabel.frame) + kSectionVSpacer);
+                             CGRectGetMaxY(self.selectedPhotosVC.view.frame) + kSectionVSpacer);
   self.descriptionLabel.frame = frame;
 }
 
