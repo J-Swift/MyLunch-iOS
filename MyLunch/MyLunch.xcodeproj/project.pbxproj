@@ -11,22 +11,11 @@
 		BFC3CA151A9EB17E00F27AEB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BFC3CA141A9EB17E00F27AEB /* AppDelegate.m */; };
 		BFC3CA181A9EB17E00F27AEB /* MYLTextInputViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFC3CA171A9EB17E00F27AEB /* MYLTextInputViewController.m */; };
 		BFC3CA1D1A9EB17E00F27AEB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFC3CA1C1A9EB17E00F27AEB /* Images.xcassets */; };
-		BFC3CA2C1A9EB17F00F27AEB /* MyLunchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BFC3CA2B1A9EB17F00F27AEB /* MyLunchTests.m */; };
 		BFC3CA371A9EBCF300F27AEB /* MYLSelectPhotosViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFC3CA361A9EBCF300F27AEB /* MYLSelectPhotosViewController.m */; };
 		BFC3CA3B1A9EBDEC00F27AEB /* MYLDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFC3CA3A1A9EBDEC00F27AEB /* MYLDetailViewController.m */; };
 		BFC3CA3E1A9EC0EE00F27AEB /* MYLLunchModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BFC3CA3D1A9EC0EE00F27AEB /* MYLLunchModel.m */; };
 		BFC3CA411A9EC2CD00F27AEB /* NSString+MYLAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = BFC3CA401A9EC2CD00F27AEB /* NSString+MYLAdditions.m */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		BFC3CA261A9EB17F00F27AEB /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFC3CA041A9EB17E00F27AEB /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = BFC3CA0B1A9EB17E00F27AEB;
-			remoteInfo = MyLunch;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		BFC3CA0C1A9EB17E00F27AEB /* MyLunch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyLunch.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -37,9 +26,6 @@
 		BFC3CA161A9EB17E00F27AEB /* MYLTextInputViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MYLTextInputViewController.h; sourceTree = "<group>"; };
 		BFC3CA171A9EB17E00F27AEB /* MYLTextInputViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MYLTextInputViewController.m; sourceTree = "<group>"; };
 		BFC3CA1C1A9EB17E00F27AEB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		BFC3CA251A9EB17F00F27AEB /* MyLunchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyLunchTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		BFC3CA2A1A9EB17F00F27AEB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BFC3CA2B1A9EB17F00F27AEB /* MyLunchTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyLunchTests.m; sourceTree = "<group>"; };
 		BFC3CA351A9EBCF300F27AEB /* MYLSelectPhotosViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MYLSelectPhotosViewController.h; sourceTree = "<group>"; };
 		BFC3CA361A9EBCF300F27AEB /* MYLSelectPhotosViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MYLSelectPhotosViewController.m; sourceTree = "<group>"; };
 		BFC3CA391A9EBDEC00F27AEB /* MYLDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MYLDetailViewController.h; sourceTree = "<group>"; };
@@ -59,13 +45,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BFC3CA221A9EB17F00F27AEB /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -73,7 +52,6 @@
 			isa = PBXGroup;
 			children = (
 				BFC3CA0E1A9EB17E00F27AEB /* MyLunch */,
-				BFC3CA281A9EB17F00F27AEB /* MyLunchTests */,
 				BFC3CA0D1A9EB17E00F27AEB /* Products */,
 			);
 			sourceTree = "<group>";
@@ -82,7 +60,6 @@
 			isa = PBXGroup;
 			children = (
 				BFC3CA0C1A9EB17E00F27AEB /* MyLunch.app */,
-				BFC3CA251A9EB17F00F27AEB /* MyLunchTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -105,23 +82,6 @@
 			children = (
 				BFC3CA101A9EB17E00F27AEB /* Info.plist */,
 				BFC3CA111A9EB17E00F27AEB /* main.m */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		BFC3CA281A9EB17F00F27AEB /* MyLunchTests */ = {
-			isa = PBXGroup;
-			children = (
-				BFC3CA2B1A9EB17F00F27AEB /* MyLunchTests.m */,
-				BFC3CA291A9EB17F00F27AEB /* Supporting Files */,
-			);
-			path = MyLunchTests;
-			sourceTree = "<group>";
-		};
-		BFC3CA291A9EB17F00F27AEB /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				BFC3CA2A1A9EB17F00F27AEB /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -163,24 +123,6 @@
 			productReference = BFC3CA0C1A9EB17E00F27AEB /* MyLunch.app */;
 			productType = "com.apple.product-type.application";
 		};
-		BFC3CA241A9EB17F00F27AEB /* MyLunchTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = BFC3CA321A9EB17F00F27AEB /* Build configuration list for PBXNativeTarget "MyLunchTests" */;
-			buildPhases = (
-				BFC3CA211A9EB17F00F27AEB /* Sources */,
-				BFC3CA221A9EB17F00F27AEB /* Frameworks */,
-				BFC3CA231A9EB17F00F27AEB /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				BFC3CA271A9EB17F00F27AEB /* PBXTargetDependency */,
-			);
-			name = MyLunchTests;
-			productName = MyLunchTests;
-			productReference = BFC3CA251A9EB17F00F27AEB /* MyLunchTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -193,10 +135,6 @@
 				TargetAttributes = {
 					BFC3CA0B1A9EB17E00F27AEB = {
 						CreatedOnToolsVersion = 6.1.1;
-					};
-					BFC3CA241A9EB17F00F27AEB = {
-						CreatedOnToolsVersion = 6.1.1;
-						TestTargetID = BFC3CA0B1A9EB17E00F27AEB;
 					};
 				};
 			};
@@ -214,7 +152,6 @@
 			projectRoot = "";
 			targets = (
 				BFC3CA0B1A9EB17E00F27AEB /* MyLunch */,
-				BFC3CA241A9EB17F00F27AEB /* MyLunchTests */,
 			);
 		};
 /* End PBXProject section */
@@ -225,13 +162,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				BFC3CA1D1A9EB17E00F27AEB /* Images.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		BFC3CA231A9EB17F00F27AEB /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -252,23 +182,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BFC3CA211A9EB17F00F27AEB /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				BFC3CA2C1A9EB17F00F27AEB /* MyLunchTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		BFC3CA271A9EB17F00F27AEB /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = BFC3CA0B1A9EB17E00F27AEB /* MyLunch */;
-			targetProxy = BFC3CA261A9EB17F00F27AEB /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		BFC3CA2D1A9EB17F00F27AEB /* Debug */ = {
@@ -375,40 +289,6 @@
 			};
 			name = Release;
 		};
-		BFC3CA331A9EB17F00F27AEB /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = MyLunchTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MyLunch.app/MyLunch";
-			};
-			name = Debug;
-		};
-		BFC3CA341A9EB17F00F27AEB /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = MyLunchTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MyLunch.app/MyLunch";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -426,15 +306,6 @@
 			buildConfigurations = (
 				BFC3CA301A9EB17F00F27AEB /* Debug */,
 				BFC3CA311A9EB17F00F27AEB /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		BFC3CA321A9EB17F00F27AEB /* Build configuration list for PBXNativeTarget "MyLunchTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				BFC3CA331A9EB17F00F27AEB /* Debug */,
-				BFC3CA341A9EB17F00F27AEB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
