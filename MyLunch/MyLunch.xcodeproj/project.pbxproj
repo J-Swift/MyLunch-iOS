@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9D4FBAEC9461FAB09E1D1F79 /* libPods-MyLunch.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C9B7B8CFC8FA9293593850CC /* libPods-MyLunch.a */; };
 		BFC3CA121A9EB17E00F27AEB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BFC3CA111A9EB17E00F27AEB /* main.m */; };
 		BFC3CA151A9EB17E00F27AEB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BFC3CA141A9EB17E00F27AEB /* AppDelegate.m */; };
 		BFC3CA181A9EB17E00F27AEB /* MYLTextInputViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFC3CA171A9EB17E00F27AEB /* MYLTextInputViewController.m */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		52238F76CF9C4C15344D5755 /* Pods-MyLunch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyLunch.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-MyLunch/Pods-MyLunch.debug.xcconfig"; sourceTree = "<group>"; };
 		BFC3CA0C1A9EB17E00F27AEB /* MyLunch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyLunch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFC3CA101A9EB17E00F27AEB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BFC3CA111A9EB17E00F27AEB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -35,6 +37,8 @@
 		BFC3CA3F1A9EC2CD00F27AEB /* NSString+MYLAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MYLAdditions.h"; sourceTree = "<group>"; };
 		BFC3CA401A9EC2CD00F27AEB /* NSString+MYLAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MYLAdditions.m"; sourceTree = "<group>"; };
 		BFC3CA421A9EC39D00F27AEB /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PrefixHeader.pch; path = ../PrefixHeader.pch; sourceTree = "<group>"; };
+		C9B7B8CFC8FA9293593850CC /* libPods-MyLunch.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MyLunch.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F70A4283A5BC07E8087DFE52 /* Pods-MyLunch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyLunch.release.xcconfig"; path = "../Pods/Target Support Files/Pods-MyLunch/Pods-MyLunch.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,17 +46,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9D4FBAEC9461FAB09E1D1F79 /* libPods-MyLunch.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		06A8AF8A6ED286A437713965 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				52238F76CF9C4C15344D5755 /* Pods-MyLunch.debug.xcconfig */,
+				F70A4283A5BC07E8087DFE52 /* Pods-MyLunch.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		5B5C198393201EC766DB8B6A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C9B7B8CFC8FA9293593850CC /* libPods-MyLunch.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		BFC3CA031A9EB17E00F27AEB = {
 			isa = PBXGroup;
 			children = (
 				BFC3CA0E1A9EB17E00F27AEB /* MyLunch */,
 				BFC3CA0D1A9EB17E00F27AEB /* Products */,
+				06A8AF8A6ED286A437713965 /* Pods */,
+				5B5C198393201EC766DB8B6A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -110,9 +134,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BFC3CA2F1A9EB17F00F27AEB /* Build configuration list for PBXNativeTarget "MyLunch" */;
 			buildPhases = (
+				3ABB5DC413A4AD065EC05D50 /* Check Pods Manifest.lock */,
 				BFC3CA081A9EB17E00F27AEB /* Sources */,
 				BFC3CA091A9EB17E00F27AEB /* Frameworks */,
 				BFC3CA0A1A9EB17E00F27AEB /* Resources */,
+				32E1AEAF5D949A2757A9AF05 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -166,6 +192,39 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		32E1AEAF5D949A2757A9AF05 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-MyLunch/Pods-MyLunch-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3ABB5DC413A4AD065EC05D50 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		BFC3CA081A9EB17E00F27AEB /* Sources */ = {
@@ -267,6 +326,7 @@
 		};
 		BFC3CA301A9EB17F00F27AEB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 52238F76CF9C4C15344D5755 /* Pods-MyLunch.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -279,6 +339,7 @@
 		};
 		BFC3CA311A9EB17F00F27AEB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F70A4283A5BC07E8087DFE52 /* Pods-MyLunch.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
