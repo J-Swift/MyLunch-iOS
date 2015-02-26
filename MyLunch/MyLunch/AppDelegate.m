@@ -16,6 +16,7 @@
 {
   UIViewController *vc = [MYLTextInputViewController new];
   UINavigationController *navVC = [[UINavigationController alloc] initWithRootViewController:vc];
+  navVC.navigationBar.translucent = NO;
  
   self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
   self.window.rootViewController = navVC;
