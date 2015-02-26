@@ -11,6 +11,7 @@
 
 static NSString * const kCellIdentifier = @"cell";
 static const CGSize kCellSize = {165, 110};
+static const NSUInteger kTargetNumberOfRowsDisplayed = 2;
 
 
 #pragma mark = MYLSelectedPhotosView
@@ -41,10 +42,25 @@ static const CGSize kCellSize = {165, 110};
   if ( !numItems )
     return CGSizeZero;
   
-  // TODO(jpr): real height
-  CGSize idealSize = _collectionView.contentSize;
-  CGFloat idealHeight = MIN(size.height, 100);
+  UICollectionViewFlowLayout *layout = (UICollectionViewFlowLayout *)_collectionView.collectionViewLayout;
   
+  CGFloat widthForCurrentNumberOfCells = kCellSize.width * numItems + (numItems - 1) * layout.minimumInteritemSpacing;
+  
+  CGFloat idealHeight = 0;
+  
+  if ( widthForCurrentNumberOfCells <= size.width )
+  {
+    // NOTE(jpr): tightly bound if we only have 1 row...
+    idealHeight = kCellSize.height;
+  }
+  else
+  {
+    // NOTE(jpr): ... otherwise, bound to the required height for target number of rows
+    CGFloat heightForTargetNumberOfRows = kCellSize.height * kTargetNumberOfRowsDisplayed + (kTargetNumberOfRowsDisplayed - 1) * layout.minimumLineSpacing;
+    idealHeight = heightForTargetNumberOfRows;
+  }
+  
+  idealHeight = MIN(size.height, idealHeight);
   return CGSizeMake(size.width, idealHeight);
 }
 
