@@ -1,5 +1,5 @@
 //
-//  MYLMyLunchTextInputViewController.h
+//  MYLTextInputViewController.h
 //  MyLunch
 //
 //  Created by James Reichley on 2/25/15.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MYLMyLunchTextInputViewController : UIViewController
+@interface MYLTextInputViewController : UIViewController
 @end
 

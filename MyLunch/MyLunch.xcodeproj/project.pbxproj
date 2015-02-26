@@ -9,9 +9,11 @@
 /* Begin PBXBuildFile section */
 		BFC3CA121A9EB17E00F27AEB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BFC3CA111A9EB17E00F27AEB /* main.m */; };
 		BFC3CA151A9EB17E00F27AEB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BFC3CA141A9EB17E00F27AEB /* AppDelegate.m */; };
-		BFC3CA181A9EB17E00F27AEB /* MYLMyLunchTextInputViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFC3CA171A9EB17E00F27AEB /* MYLMyLunchTextInputViewController.m */; };
+		BFC3CA181A9EB17E00F27AEB /* MYLTextInputViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFC3CA171A9EB17E00F27AEB /* MYLTextInputViewController.m */; };
 		BFC3CA1D1A9EB17E00F27AEB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFC3CA1C1A9EB17E00F27AEB /* Images.xcassets */; };
 		BFC3CA2C1A9EB17F00F27AEB /* MyLunchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BFC3CA2B1A9EB17F00F27AEB /* MyLunchTests.m */; };
+		BFC3CA371A9EBCF300F27AEB /* MYLSelectPhotosViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFC3CA361A9EBCF300F27AEB /* MYLSelectPhotosViewController.m */; };
+		BFC3CA3B1A9EBDEC00F27AEB /* MYLDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFC3CA3A1A9EBDEC00F27AEB /* MYLDetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,12 +32,16 @@
 		BFC3CA111A9EB17E00F27AEB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		BFC3CA131A9EB17E00F27AEB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		BFC3CA141A9EB17E00F27AEB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		BFC3CA161A9EB17E00F27AEB /* MYLMyLunchTextInputViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MYLMyLunchTextInputViewController.h; sourceTree = "<group>"; };
-		BFC3CA171A9EB17E00F27AEB /* MYLMyLunchTextInputViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MYLMyLunchTextInputViewController.m; sourceTree = "<group>"; };
+		BFC3CA161A9EB17E00F27AEB /* MYLTextInputViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MYLTextInputViewController.h; sourceTree = "<group>"; };
+		BFC3CA171A9EB17E00F27AEB /* MYLTextInputViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MYLTextInputViewController.m; sourceTree = "<group>"; };
 		BFC3CA1C1A9EB17E00F27AEB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		BFC3CA251A9EB17F00F27AEB /* MyLunchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyLunchTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFC3CA2A1A9EB17F00F27AEB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BFC3CA2B1A9EB17F00F27AEB /* MyLunchTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyLunchTests.m; sourceTree = "<group>"; };
+		BFC3CA351A9EBCF300F27AEB /* MYLSelectPhotosViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MYLSelectPhotosViewController.h; sourceTree = "<group>"; };
+		BFC3CA361A9EBCF300F27AEB /* MYLSelectPhotosViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MYLSelectPhotosViewController.m; sourceTree = "<group>"; };
+		BFC3CA391A9EBDEC00F27AEB /* MYLDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MYLDetailViewController.h; sourceTree = "<group>"; };
+		BFC3CA3A1A9EBDEC00F27AEB /* MYLDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MYLDetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,10 +83,9 @@
 		BFC3CA0E1A9EB17E00F27AEB /* MyLunch */ = {
 			isa = PBXGroup;
 			children = (
+				BFC3CA381A9EBD0100F27AEB /* Classes */,
 				BFC3CA131A9EB17E00F27AEB /* AppDelegate.h */,
 				BFC3CA141A9EB17E00F27AEB /* AppDelegate.m */,
-				BFC3CA161A9EB17E00F27AEB /* MYLMyLunchTextInputViewController.h */,
-				BFC3CA171A9EB17E00F27AEB /* MYLMyLunchTextInputViewController.m */,
 				BFC3CA1C1A9EB17E00F27AEB /* Images.xcassets */,
 				BFC3CA0F1A9EB17E00F27AEB /* Supporting Files */,
 			);
@@ -111,6 +116,19 @@
 				BFC3CA2A1A9EB17F00F27AEB /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BFC3CA381A9EBD0100F27AEB /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				BFC3CA161A9EB17E00F27AEB /* MYLTextInputViewController.h */,
+				BFC3CA171A9EB17E00F27AEB /* MYLTextInputViewController.m */,
+				BFC3CA351A9EBCF300F27AEB /* MYLSelectPhotosViewController.h */,
+				BFC3CA361A9EBCF300F27AEB /* MYLSelectPhotosViewController.m */,
+				BFC3CA391A9EBDEC00F27AEB /* MYLDetailViewController.h */,
+				BFC3CA3A1A9EBDEC00F27AEB /* MYLDetailViewController.m */,
+			);
+			name = Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -212,9 +230,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BFC3CA181A9EB17E00F27AEB /* MYLMyLunchTextInputViewController.m in Sources */,
+				BFC3CA181A9EB17E00F27AEB /* MYLTextInputViewController.m in Sources */,
 				BFC3CA151A9EB17E00F27AEB /* AppDelegate.m in Sources */,
 				BFC3CA121A9EB17E00F27AEB /* main.m in Sources */,
+				BFC3CA3B1A9EBDEC00F27AEB /* MYLDetailViewController.m in Sources */,
+				BFC3CA371A9EBCF300F27AEB /* MYLSelectPhotosViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

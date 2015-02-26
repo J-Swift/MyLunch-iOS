@@ -8,18 +8,13 @@
 
 #import "AppDelegate.h"
 
-#import "MYLMyLunchTextInputViewController.h"
-
-@interface AppDelegate ()
-
-@end
+#import "MYLTextInputViewController.h"
 
 @implementation AppDelegate
 
-
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-  UIViewController *vc = [MYLMyLunchTextInputViewController new];
+  UIViewController *vc = [MYLTextInputViewController new];
   UINavigationController *navVC = [[UINavigationController alloc] initWithRootViewController:vc];
  
   self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
