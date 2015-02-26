@@ -17,12 +17,16 @@
 
 - (instancetype)initWithName:(NSString *)name foodDescription:(NSString *)foodDescription
 {
+  name = [name myl_trim];
+  foodDescription = [foodDescription myl_trim];
+  
+  if ( ![name length] || ![foodDescription length] )
+    return nil;
+  
   if ( self = [super init] )
   {
-    _name = [name myl_trim];
-    _foodDescription = [foodDescription myl_trim];
-    
-    NSParameterAssert([_name length] && [_foodDescription length]);
+    _name = name;
+    _foodDescription = foodDescription;
   }
   
   return self;

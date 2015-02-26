@@ -114,9 +114,14 @@ static const CGFloat kItemVSpacer = 5.0f;
   [self.nameInput resignFirstResponder];
   [self.descriptionInput resignFirstResponder];
   
-  // TODO(jpr): error handling
   MYLLunchModel *model = [[MYLLunchModel alloc] initWithName:self.nameInput.text
                                              foodDescription:self.descriptionInput.text];
+  if ( !model )
+  {
+    // TODO(jpr): popup alert
+    return;
+  }
+  
   UIViewController *vc = [[MYLSelectPhotosViewController alloc] initWithLunchModel:model];
   [self.navigationController pushViewController:vc animated:YES];
 }
