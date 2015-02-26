@@ -10,6 +10,19 @@
 
 #import "MYLDetailViewController.h"
 
+
+static const CGFloat kViewMargin = 10.0f;
+static const CGFloat kSectionVSpacer = 20.0f;
+static const CGFloat kItemVSpacer = 5.0f;
+
+
+@interface MYLSelectPhotosViewController ()
+
+@property (nonatomic, weak) UILabel *instructionLabel;
+
+@end
+
+
 @implementation MYLSelectPhotosViewController
 
 - (instancetype)initWithLunchModel:(MYLLunchModel *)model
@@ -25,15 +38,32 @@
 
 - (void)loadView
 {
-  UILabel *label = [UILabel new];
-  label.text = @"Screen 2";
-  label.textAlignment = NSTextAlignmentCenter;
-  label.backgroundColor = [UIColor greenColor];
+  UIView *view = [UIView new];
+  view.backgroundColor = [UIColor whiteColor];
+  
+  UILabel *instructionLabel = [UILabel new];
+  instructionLabel.text = @"Add photos to your lunch (optional)";
+  instructionLabel.numberOfLines = 0;
+  [view addSubview:instructionLabel];
+  _instructionLabel = instructionLabel;
   
   self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone
                                                                                          target:self
                                                                                          action:@selector(donePressed)];
-  self.view = label;
+  self.view = view;
+}
+
+- (void)viewWillLayoutSubviews
+{
+  [super viewWillLayoutSubviews];
+  
+  CGRect bounds = self.view.bounds;
+  CGFloat width = CGRectGetWidth(bounds) - 2*kViewMargin;
+  
+  CGRect frame = self.instructionLabel.frame;
+  frame.size = [self.instructionLabel sizeThatFits:CGSizeMake(width, CGFLOAT_MAX)];
+  frame.origin = CGPointMake(kViewMargin, kViewMargin);
+  self.instructionLabel.frame = frame;
 }
 
 - (NSString *)title
