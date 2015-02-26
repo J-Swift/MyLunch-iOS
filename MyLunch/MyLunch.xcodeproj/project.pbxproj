@@ -9,10 +9,8 @@
 /* Begin PBXBuildFile section */
 		BFC3CA121A9EB17E00F27AEB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BFC3CA111A9EB17E00F27AEB /* main.m */; };
 		BFC3CA151A9EB17E00F27AEB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BFC3CA141A9EB17E00F27AEB /* AppDelegate.m */; };
-		BFC3CA181A9EB17E00F27AEB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFC3CA171A9EB17E00F27AEB /* ViewController.m */; };
-		BFC3CA1B1A9EB17E00F27AEB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFC3CA191A9EB17E00F27AEB /* Main.storyboard */; };
+		BFC3CA181A9EB17E00F27AEB /* MYLMyLunchTextInputViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFC3CA171A9EB17E00F27AEB /* MYLMyLunchTextInputViewController.m */; };
 		BFC3CA1D1A9EB17E00F27AEB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFC3CA1C1A9EB17E00F27AEB /* Images.xcassets */; };
-		BFC3CA201A9EB17F00F27AEB /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFC3CA1E1A9EB17E00F27AEB /* LaunchScreen.xib */; };
 		BFC3CA2C1A9EB17F00F27AEB /* MyLunchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BFC3CA2B1A9EB17F00F27AEB /* MyLunchTests.m */; };
 /* End PBXBuildFile section */
 
@@ -32,11 +30,9 @@
 		BFC3CA111A9EB17E00F27AEB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		BFC3CA131A9EB17E00F27AEB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		BFC3CA141A9EB17E00F27AEB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		BFC3CA161A9EB17E00F27AEB /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		BFC3CA171A9EB17E00F27AEB /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		BFC3CA1A1A9EB17E00F27AEB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BFC3CA161A9EB17E00F27AEB /* MYLMyLunchTextInputViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MYLMyLunchTextInputViewController.h; sourceTree = "<group>"; };
+		BFC3CA171A9EB17E00F27AEB /* MYLMyLunchTextInputViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MYLMyLunchTextInputViewController.m; sourceTree = "<group>"; };
 		BFC3CA1C1A9EB17E00F27AEB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		BFC3CA1F1A9EB17F00F27AEB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		BFC3CA251A9EB17F00F27AEB /* MyLunchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyLunchTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFC3CA2A1A9EB17F00F27AEB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BFC3CA2B1A9EB17F00F27AEB /* MyLunchTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyLunchTests.m; sourceTree = "<group>"; };
@@ -83,11 +79,9 @@
 			children = (
 				BFC3CA131A9EB17E00F27AEB /* AppDelegate.h */,
 				BFC3CA141A9EB17E00F27AEB /* AppDelegate.m */,
-				BFC3CA161A9EB17E00F27AEB /* ViewController.h */,
-				BFC3CA171A9EB17E00F27AEB /* ViewController.m */,
-				BFC3CA191A9EB17E00F27AEB /* Main.storyboard */,
+				BFC3CA161A9EB17E00F27AEB /* MYLMyLunchTextInputViewController.h */,
+				BFC3CA171A9EB17E00F27AEB /* MYLMyLunchTextInputViewController.m */,
 				BFC3CA1C1A9EB17E00F27AEB /* Images.xcassets */,
-				BFC3CA1E1A9EB17E00F27AEB /* LaunchScreen.xib */,
 				BFC3CA0F1A9EB17E00F27AEB /* Supporting Files */,
 			);
 			path = MyLunch;
@@ -163,6 +157,7 @@
 		BFC3CA041A9EB17E00F27AEB /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = MYL;
 				LastUpgradeCheck = 0610;
 				ORGANIZATIONNAME = RadReichley;
 				TargetAttributes = {
@@ -199,8 +194,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BFC3CA1B1A9EB17E00F27AEB /* Main.storyboard in Resources */,
-				BFC3CA201A9EB17F00F27AEB /* LaunchScreen.xib in Resources */,
 				BFC3CA1D1A9EB17E00F27AEB /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -219,7 +212,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BFC3CA181A9EB17E00F27AEB /* ViewController.m in Sources */,
+				BFC3CA181A9EB17E00F27AEB /* MYLMyLunchTextInputViewController.m in Sources */,
 				BFC3CA151A9EB17E00F27AEB /* AppDelegate.m in Sources */,
 				BFC3CA121A9EB17E00F27AEB /* main.m in Sources */,
 			);
@@ -242,25 +235,6 @@
 			targetProxy = BFC3CA261A9EB17F00F27AEB /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		BFC3CA191A9EB17E00F27AEB /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				BFC3CA1A1A9EB17E00F27AEB /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		BFC3CA1E1A9EB17E00F27AEB /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				BFC3CA1F1A9EB17F00F27AEB /* Base */,
-			);
-			name = LaunchScreen.xib;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		BFC3CA2D1A9EB17F00F27AEB /* Debug */ = {
@@ -414,6 +388,7 @@
 				BFC3CA311A9EB17F00F27AEB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BFC3CA321A9EB17F00F27AEB /* Build configuration list for PBXNativeTarget "MyLunchTests" */ = {
 			isa = XCConfigurationList;
@@ -422,6 +397,7 @@
 				BFC3CA341A9EB17F00F27AEB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
