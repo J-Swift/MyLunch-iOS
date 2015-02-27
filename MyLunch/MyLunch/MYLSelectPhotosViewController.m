@@ -43,6 +43,10 @@
   self.view = view;
   view.backgroundColor = [UIColor whiteColor];
   
+  UITapGestureRecognizer *onTap = [[UITapGestureRecognizer alloc] initWithTarget:self
+                                                                          action:@selector(beginSelectingPhotos)];
+  [view addGestureRecognizer:onTap];
+  
   UILabel *instructionLabel = [UILabel new];
   instructionLabel.text = @"Tap here to add photos to your lunch (optional)";
   instructionLabel.numberOfLines = 0;
@@ -54,13 +58,11 @@
   [self.view addSubview:self.selectedPhotosVC.view];
   [self.selectedPhotosVC didMoveToParentViewController:self];
   
-  self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone
-                                                                                         target:self
-                                                                                         action:@selector(donePressed)];
-  
-  UITapGestureRecognizer *onTap = [[UITapGestureRecognizer alloc] initWithTarget:self
-                                                                          action:@selector(beginSelectingPhotos)];
-  [view addGestureRecognizer:onTap];
+  UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithTitle:@"Continue"
+                                                           style:UIBarButtonItemStylePlain
+                                                          target:self
+                                                          action:@selector(continuePressed)];
+  self.navigationItem.rightBarButtonItem = item;
 }
 
 - (void)viewWillLayoutSubviews
@@ -117,7 +119,7 @@
   [self presentViewController:imagePickerVC animated:YES completion:NULL];
 }
 
-- (void)donePressed
+- (void)continuePressed
 {
   // TODO(jpr): error handling
   [self.model associatePhotos:self.selectedPhotosVC.photos];

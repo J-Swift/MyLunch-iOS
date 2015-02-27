@@ -50,7 +50,7 @@
   
   // TODO(jpr): delegate methods
   UITextView *descriptionInput = [UITextView new];
-  // NOTE(jpr): attempt mimic UITextField styling
+  // NOTE(jpr): attempt to mimic UITextField styling
   descriptionInput.layer.borderColor = [UIColor colorWithWhite:0.8275f alpha:1.0f].CGColor;
   descriptionInput.layer.borderWidth = 1.0f;
   descriptionInput.layer.cornerRadius = 5.0f;
@@ -58,9 +58,12 @@
   [view addSubview:descriptionInput];
   _descriptionInput = descriptionInput;
   
-  self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone
-                                                                                         target:self
-                                                                                         action:@selector(donePressed)];
+  UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithTitle:@"Continue"
+                                                           style:UIBarButtonItemStylePlain
+                                                          target:self
+                                                          action:@selector(continuePressed)];
+  self.navigationItem.rightBarButtonItem = item;
+  
   self.view = view;
 }
 
@@ -104,7 +107,7 @@
 
 #pragma mark - Helpers
 
-- (void)donePressed
+- (void)continuePressed
 {
   [self.nameInput resignFirstResponder];
   [self.descriptionInput resignFirstResponder];
