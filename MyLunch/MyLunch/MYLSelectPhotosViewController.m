@@ -121,7 +121,6 @@
 
 - (void)continuePressed
 {
-  // TODO(jpr): error handling
   [self.model associatePhotos:self.selectedPhotosVC.photos];
   UIViewController *vc = [[MYLDetailViewController alloc] initWithLunchModel:self.model];
   [self.navigationController pushViewController:vc animated:YES];

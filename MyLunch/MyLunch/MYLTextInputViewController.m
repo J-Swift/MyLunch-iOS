@@ -12,7 +12,7 @@
 #import "MYLLunchModel.h"
 
 
-@interface MYLTextInputViewController ()
+@interface MYLTextInputViewController () <UITextFieldDelegate>
 
 @property (nonatomic, weak) UILabel *nameLabel;
 @property (nonatomic, weak) UITextField *nameInput;
@@ -36,8 +36,9 @@
   [view addSubview:nameLabel];
   _nameLabel = nameLabel;
   
-  // TODO(jpr): delegate methods
   UITextField *nameInput = [UITextField new];
+  nameInput.delegate = self;
+  nameInput.returnKeyType = UIReturnKeyDone;
   nameInput.borderStyle = UITextBorderStyleRoundedRect;
   [view addSubview:nameInput];
   _nameInput = nameInput;
@@ -48,7 +49,6 @@
   [view addSubview:descriptionLabel];
   _descriptionLabel = descriptionLabel;
   
-  // TODO(jpr): delegate methods
   UITextView *descriptionInput = [UITextView new];
   // NOTE(jpr): attempt to mimic UITextField styling
   descriptionInput.layer.borderColor = [UIColor colorWithWhite:0.8275f alpha:1.0f].CGColor;
@@ -103,6 +103,14 @@
 - (NSString *)title
 {
   return @"My Lunch";
+}
+
+#pragma mark - UITextFieldDelegate
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+  [textField resignFirstResponder];
+  return YES;
 }
 
 #pragma mark - Helpers
