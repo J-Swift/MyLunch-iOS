@@ -124,7 +124,14 @@
                                              foodDescription:self.descriptionInput.text];
   if ( !model )
   {
-    // TODO(jpr): popup alert
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Whoops"
+                                                                   message:@"You must fill-in both the name and description!"
+                                                            preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"OK"
+                                                           style:UIAlertActionStyleCancel
+                                                         handler:NULL];
+    [alert addAction:cancelAction];
+    [self presentViewController:alert animated:YES completion:NULL];
     return;
   }
   
