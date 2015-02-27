@@ -12,11 +12,6 @@
 #import "MYLLunchModel.h"
 
 
-static const CGFloat kViewMargin = 10.0f;
-static const CGFloat kSectionVSpacer = 20.0f;
-static const CGFloat kItemVSpacer = 5.0f;
-
-
 @interface MYLTextInputViewController ()
 
 @property (nonatomic, weak) UILabel *nameLabel;
@@ -74,31 +69,31 @@ static const CGFloat kItemVSpacer = 5.0f;
   [super viewWillLayoutSubviews];
   
   CGRect bounds = self.view.bounds;
-  CGFloat width = CGRectGetWidth(bounds) - 2*kViewMargin;
+  CGFloat width = CGRectGetWidth(bounds) - 2*[MYLStyleHelper viewHMargin];
   
   
   CGRect frame = self.nameLabel.frame;
   frame.size = [self.nameLabel sizeThatFits:CGSizeMake(width, CGFLOAT_MAX)];
-  frame.origin = CGPointMake(kViewMargin, kViewMargin);
+  frame.origin = CGPointMake([MYLStyleHelper viewHMargin], [MYLStyleHelper viewVMargin]);
   self.nameLabel.frame = frame;
   
   frame = self.nameInput.frame;
   frame.size = CGSizeMake(width, self.nameInput.font.lineHeight + 10);
-  frame.origin = CGPointMake(kViewMargin,
-                             CGRectGetMaxY(self.nameLabel.frame) + kItemVSpacer);
+  frame.origin = CGPointMake([MYLStyleHelper viewHMargin],
+                             CGRectGetMaxY(self.nameLabel.frame) + [MYLStyleHelper itemVSpacer]);
   self.nameInput.frame = frame;
   
   
   frame = self.descriptionLabel.frame;
   frame.size = [self.descriptionLabel sizeThatFits:CGSizeMake(width, CGFLOAT_MAX)];
-  frame.origin = CGPointMake(kViewMargin,
-                             CGRectGetMaxY(self.nameInput.frame) + kSectionVSpacer);
+  frame.origin = CGPointMake([MYLStyleHelper viewHMargin],
+                             CGRectGetMaxY(self.nameInput.frame) + [MYLStyleHelper sectionVSpacer]);
   self.descriptionLabel.frame = frame;
   
   frame = self.descriptionInput.frame;
   frame.size = CGSizeMake(width, 220);
-  frame.origin = CGPointMake(kViewMargin,
-                             CGRectGetMaxY(self.descriptionLabel.frame) + kItemVSpacer);
+  frame.origin = CGPointMake([MYLStyleHelper viewHMargin],
+                             CGRectGetMaxY(self.descriptionLabel.frame) + [MYLStyleHelper itemVSpacer]);
   self.descriptionInput.frame = frame;
 }
 

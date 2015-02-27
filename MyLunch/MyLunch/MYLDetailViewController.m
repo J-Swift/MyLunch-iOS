@@ -12,10 +12,6 @@
 #import "MYLLunchModel.h"
 
 
-static const CGFloat kViewMargin = 10.0f;
-static const CGFloat kSectionVSpacer = 20.0f;
-
-
 @interface MYLDetailViewController ()
 
 @property (nonatomic, strong) MYLSelectedPhotosViewController *selectedPhotosVC;
@@ -67,23 +63,24 @@ static const CGFloat kSectionVSpacer = 20.0f;
   [super viewWillLayoutSubviews];
   
   CGRect bounds = self.view.bounds;
-  CGFloat width = CGRectGetWidth(bounds) - 2*kViewMargin;
+  CGFloat width = CGRectGetWidth(bounds) - 2*[MYLStyleHelper viewHMargin];
   
   
   CGRect frame = self.nameLabel.frame;
   frame.size = [self.nameLabel sizeThatFits:CGSizeMake(width, CGFLOAT_MAX)];
-  frame.origin = CGPointMake(kViewMargin, kViewMargin);
+  frame.origin = CGPointMake([MYLStyleHelper viewHMargin], [MYLStyleHelper viewVMargin]);
   self.nameLabel.frame = frame;
   
   frame = self.selectedPhotosVC.view.frame;
   frame.size = [self.selectedPhotosVC.view sizeThatFits:CGSizeMake(width, CGFLOAT_MAX)];
-  frame.origin = CGPointMake(kViewMargin, CGRectGetMaxY(self.nameLabel.frame) + kViewMargin);
+  frame.origin = CGPointMake([MYLStyleHelper viewHMargin],
+                             CGRectGetMaxY(self.nameLabel.frame) + [MYLStyleHelper sectionVSpacer]);
   self.selectedPhotosVC.view.frame = frame;
   
   frame = self.descriptionLabel.frame;
   frame.size = [self.descriptionLabel sizeThatFits:CGSizeMake(width, CGFLOAT_MAX)];
-  frame.origin = CGPointMake(kViewMargin,
-                             CGRectGetMaxY(self.selectedPhotosVC.view.frame) + kSectionVSpacer);
+  frame.origin = CGPointMake([MYLStyleHelper viewHMargin],
+                             CGRectGetMaxY(self.selectedPhotosVC.view.frame) + [MYLStyleHelper sectionVSpacer]);
   self.descriptionLabel.frame = frame;
 }
 

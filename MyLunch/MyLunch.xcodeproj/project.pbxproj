@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		9D4FBAEC9461FAB09E1D1F79 /* libPods-MyLunch.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C9B7B8CFC8FA9293593850CC /* libPods-MyLunch.a */; };
+		BF99D75A1AA01DD5005A9F39 /* MYLStyleHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = BF99D7591AA01DD5005A9F39 /* MYLStyleHelper.m */; };
 		BFC3CA121A9EB17E00F27AEB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BFC3CA111A9EB17E00F27AEB /* main.m */; };
 		BFC3CA151A9EB17E00F27AEB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BFC3CA141A9EB17E00F27AEB /* AppDelegate.m */; };
 		BFC3CA181A9EB17E00F27AEB /* MYLTextInputViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFC3CA171A9EB17E00F27AEB /* MYLTextInputViewController.m */; };
@@ -21,6 +22,8 @@
 
 /* Begin PBXFileReference section */
 		52238F76CF9C4C15344D5755 /* Pods-MyLunch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyLunch.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-MyLunch/Pods-MyLunch.debug.xcconfig"; sourceTree = "<group>"; };
+		BF99D7581AA01DD5005A9F39 /* MYLStyleHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MYLStyleHelper.h; sourceTree = "<group>"; };
+		BF99D7591AA01DD5005A9F39 /* MYLStyleHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MYLStyleHelper.m; sourceTree = "<group>"; };
 		BFC3CA0C1A9EB17E00F27AEB /* MyLunch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyLunch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFC3CA101A9EB17E00F27AEB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BFC3CA111A9EB17E00F27AEB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -128,6 +131,8 @@
 				BFC3CA3D1A9EC0EE00F27AEB /* MYLLunchModel.m */,
 				BFC3CA3F1A9EC2CD00F27AEB /* NSString+MYLAdditions.h */,
 				BFC3CA401A9EC2CD00F27AEB /* NSString+MYLAdditions.m */,
+				BF99D7581AA01DD5005A9F39 /* MYLStyleHelper.h */,
+				BF99D7591AA01DD5005A9F39 /* MYLStyleHelper.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -239,6 +244,7 @@
 				BFC3CA181A9EB17E00F27AEB /* MYLTextInputViewController.m in Sources */,
 				BFC3CA451A9EE35300F27AEB /* MYLSelectedPhotosViewController.m in Sources */,
 				BFC3CA151A9EB17E00F27AEB /* AppDelegate.m in Sources */,
+				BF99D75A1AA01DD5005A9F39 /* MYLStyleHelper.m in Sources */,
 				BFC3CA121A9EB17E00F27AEB /* main.m in Sources */,
 				BFC3CA3E1A9EC0EE00F27AEB /* MYLLunchModel.m in Sources */,
 				BFC3CA3B1A9EBDEC00F27AEB /* MYLDetailViewController.m in Sources */,

@@ -15,11 +15,6 @@
 #import <ELCImagePickerController/ELCImagePickerController.h>
 
 
-static const CGFloat kViewMargin = 10.0f;
-static const CGFloat kSectionVSpacer = 20.0f;
-static const CGFloat kItemVSpacer = 5.0f;
-
-
 @interface MYLSelectPhotosViewController () <ELCImagePickerControllerDelegate>
 
 @property (nonatomic, strong) MYLSelectedPhotosViewController *selectedPhotosVC;
@@ -73,16 +68,17 @@ static const CGFloat kItemVSpacer = 5.0f;
   [super viewWillLayoutSubviews];
   
   CGRect bounds = self.view.bounds;
-  CGFloat width = CGRectGetWidth(bounds) - 2*kViewMargin;
+  CGFloat width = CGRectGetWidth(bounds) - 2*[MYLStyleHelper viewHMargin];
   
   CGRect frame = self.instructionLabel.frame;
   frame.size = [self.instructionLabel sizeThatFits:CGSizeMake(width, CGFLOAT_MAX)];
-  frame.origin = CGPointMake(kViewMargin, kViewMargin);
+  frame.origin = CGPointMake([MYLStyleHelper viewHMargin], [MYLStyleHelper viewVMargin]);
   self.instructionLabel.frame = frame;
   
   frame = self.selectedPhotosVC.view.frame;
   frame.size = [self.selectedPhotosVC.view sizeThatFits:CGSizeMake(width, CGFLOAT_MAX)];
-  frame.origin = CGPointMake(kViewMargin, CGRectGetMaxY(self.instructionLabel.frame) + kViewMargin);
+  frame.origin = CGPointMake([MYLStyleHelper viewHMargin],
+                             CGRectGetMaxY(self.instructionLabel.frame) + [MYLStyleHelper sectionVSpacer]);
   self.selectedPhotosVC.view.frame = frame;
 }
 
