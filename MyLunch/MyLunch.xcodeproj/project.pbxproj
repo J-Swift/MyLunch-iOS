@@ -76,6 +76,24 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		BF99D75C1AA0341D005A9F39 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				BFC3CA3F1A9EC2CD00F27AEB /* NSString+MYLAdditions.h */,
+				BFC3CA401A9EC2CD00F27AEB /* NSString+MYLAdditions.m */,
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
+		BF99D75D1AA03428005A9F39 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				BF99D7581AA01DD5005A9F39 /* MYLStyleHelper.h */,
+				BF99D7591AA01DD5005A9F39 /* MYLStyleHelper.m */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
 		BFC3CA031A9EB17E00F27AEB = {
 			isa = PBXGroup;
 			children = (
@@ -119,6 +137,8 @@
 		BFC3CA381A9EBD0100F27AEB /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				BF99D75D1AA03428005A9F39 /* Utils */,
+				BF99D75C1AA0341D005A9F39 /* Categories */,
 				BFC3CA161A9EB17E00F27AEB /* MYLTextInputViewController.h */,
 				BFC3CA171A9EB17E00F27AEB /* MYLTextInputViewController.m */,
 				BFC3CA351A9EBCF300F27AEB /* MYLSelectPhotosViewController.h */,
@@ -129,10 +149,6 @@
 				BFC3CA3A1A9EBDEC00F27AEB /* MYLDetailViewController.m */,
 				BFC3CA3C1A9EC0EE00F27AEB /* MYLLunchModel.h */,
 				BFC3CA3D1A9EC0EE00F27AEB /* MYLLunchModel.m */,
-				BFC3CA3F1A9EC2CD00F27AEB /* NSString+MYLAdditions.h */,
-				BFC3CA401A9EC2CD00F27AEB /* NSString+MYLAdditions.m */,
-				BF99D7581AA01DD5005A9F39 /* MYLStyleHelper.h */,
-				BF99D7591AA01DD5005A9F39 /* MYLStyleHelper.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
